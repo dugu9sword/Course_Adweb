@@ -1,0 +1,12 @@
+<ion-view view-title="所有便签" ng-controller="NotesCtrl as notes" ng-init="doSomething()">
+
+  <ion-content>
+    <ion-list>
+    	<div ng-if="notes.noteHistory">
+	      <ion-item class="item-button-right" ng-repeat="notes in notes.noteHistory" href="#/app/notes/{{notes.title}}">
+	        {{notes.title}}
+	      </ion-item>
+      </div>
+    </ion-list>
+  </ion-content>
+</ion-view>
